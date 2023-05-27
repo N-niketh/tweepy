@@ -123,7 +123,7 @@ def generate_discord():
     image.save(image_path)
 
     return render_template('discord.html', image_path=image_path, username=username, text=text)
-
+#um
 if __name__ == '__main__':
     if not os.path.exists('static'):
         os.makedirs('static')
