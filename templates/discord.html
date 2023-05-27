@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discord Image Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/discord.css') }}">
+</head>
+<body>
+    <h1>Discord Image Generator</h1>
+
+    <div class="form-container">
+        <form action="{{ url_for('generate_discord') }}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="username">Your username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="text">Enter your message:</label>
+                <textarea id="text" name="text" rows="5" cols="30" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="image" class="file-upload-label">
+                    Upload image (optional)
+                    <input type="file" id="image" name="image" class="file-upload-input" accept="image/*" data-file-name="" onchange="handleFileUpload(this)">
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Generate Image">
+            </div>
+        </form>
+    </div>
+
+    {% if image_path %}
+        <div class="generated-image-container">
+            <img src="{{ image_path }}" alt="Generated Discord Image" class="generated-image">
+            <a href="{{ url_for('download_image', filename=image_path) }}" class="download-button">Download Image</a>
+        </div>
+    {% endif %}
+
+    <script>
+        function handleFileUpload(input) {
+            const fileName = input.files[0].name;
+            input.setAttribute('data-file-name', fileName);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* index.css */
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff; /* Set text color to white */
+}
+
+/* Header styles */
+h1 {
+  color: #1da1f2;
+  margin-bottom: 20px;
+}
+
+/* Form container styles */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000; /* Set text color to black */
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  animation: slide-up 1s ease-in-out;
+}
+
+input[type="submit"] {
+  width: 200px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  color: #ffffff; /* Set text color to white */
+  background-color: #1da1f2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #0c8ae3;
+  transform: scale(0.95);
+}
+
+/* Result styles */
+#result {
+  margin-top: 20px;
+  color: #ffffff; /* Set text color to white */
+}
+
+/* Media queries for responsive layout */
+@media only screen and (max-width: 600px) {
+  .form-container {
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* Additional Styles */
+
+/* Tweet box styles */
+.tweet-box {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #1da1f2;
+  border-radius: 8px;
+  text-align: left;
+  background-color: #14171a; /* Set background color to black */
+  transition: transform 0.3s ease-in-out;
+}
+
+.tweet-box:hover {
+  transform: scale(0.95);
+}
+
+.tweet-box .profile-picture {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.tweet-box .username {
+  font-weight: bold;
+  color: #1da1f2;
+  animation: fade-in 1s ease-in-out;
+}
+
+.tweet-box .timestamp {
+  color: #657786;
+  animation: fade-in 1s ease-in-out;
+}
+
+.tweet-box .text {
+  margin-top: 10px;
+  color: #ffffff; /* Set text color to white */
+  animation: slide-up 1s ease-in-out;
+}
+
+.tweet-box .text p {
+  margin: 0;
+}
+
+/* Input animation styles */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Additional Styles */
+
+/* File upload styles */
+/* index.css */
+
+/* ... */
+
+/* File upload styles */
+.file-upload-label {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1da1f2;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-label:hover {
+  background-color: #0c8ae3;
+}
+
+#selected-image {
+  width: 200px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  display: none;
+}
+
+/* ... */
+/* tweet.css */
+
+/* ... */
+
+/* Result styles */
+#result {
+  margin-top: 20px;
+  color: #ffffff; /* Set text color to white */
+}
+
+/* Generated image container */
+.generated-image-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #1da1f2;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #14171a; /* Set background color to black */
+  transition: transform 0.3s ease-in-out;
+}
+
+.generated-image-container:hover {
+  transform: scale(0.95);
+}
+
+.generated-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Download button */
+.download-button {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 16px;
+  color: #ffffff; /* Set text color to white */
+  background-color: #1da1f2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  background-color: #0c8ae3;
+  transform: scale(0.95);
+}
+
+/* ... */

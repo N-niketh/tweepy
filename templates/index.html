@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>twepy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My twepy</h1>
+    </header>
+
+    <section>
+        <div class="container">
+            <p class="description">We provide image generations like Twitter tweet, Discord message, etc. More coming soon!</p>
+
+            <div class="image-container">
+                <a href="{{ url_for('tweet') }}">
+                    <img src="{{ url_for('static', filename='tweet.png') }}" alt="Tweet Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="{{ url_for('discord') }}">
+                    <img src="{{ url_for('static', filename='discord.png') }}" alt="Discord Image">
+                </a>
+            </div>          
+        </div>
+    </section>
+
+</body>
+</html>

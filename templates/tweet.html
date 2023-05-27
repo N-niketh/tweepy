@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tweet Image Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/tweet.css') }}">
+</head>
+<body>
+    <h1>Tweet Image Generator</h1>
+
+    <form action="{{ url_for('generate_image') }}" method="post" enctype="multipart/form-data">
+        <label for="username">Your username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="text">Enter your tweet:</label>
+        <textarea id="text" name="text" rows="5" cols="30" required></textarea><br>
+
+        <label for="image" class="file-upload-label">
+            Upload image (optional)
+            <input type="file" id="image" name="image" class="file-upload-input" accept="image/*" data-file-name="" onchange="handleFileUpload(this)">
+        </label><br>
+
+        <input type="submit" value="Generate Image">
+    </form>
+
+    {% if image_path %}
+        <div class="generated-image-container">
+            <img src="{{ image_path }}" alt="Generated Tweet Image" class="generated-image">
+            <a href="{{ url_for('download_image', filename=image_path) }}" class="download-button">Download Image</a>
+        </div>
+    {% endif %}
+
+    <script>
+        function handleFileUpload(input) {
+            const fileName = input.files[0].name;
+            input.setAttribute('data-file-name', fileName);
+        }
+    </script>
+</body>
+</html>
